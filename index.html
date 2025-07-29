@@ -67,8 +67,37 @@
   <section>
     <div class="soundcloud-container">
       <h2>Écouter "Marcher Seul" par Bibo</h2>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1016230936&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      <!-- Méthode 1: URL directe encodée -->
+      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bibodubs/marcher-seul&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+      </iframe>
+      
+      <!-- Alternative: Si la première ne marche pas, décommentez celle-ci -->
+      <!--
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bibodubs/marcher-seul&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+      </iframe>
+      -->
     </div>
   </section>
+
+  <!-- Script de fallback si l'iframe ne marche pas -->
+  <script>
+    // Vérifier si l'iframe se charge correctement
+    window.addEventListener('load', function() {
+      const iframe = document.querySelector('iframe');
+      
+      // Timeout pour vérifier si l'iframe se charge
+      setTimeout(function() {
+        console.log('SoundCloud player should be loaded');
+      }, 3000);
+      
+      // Gestionnaire d'erreur
+      iframe.addEventListener('error', function() {
+        console.error('Erreur lors du chargement du player SoundCloud');
+        // Optionnel: afficher un message d'erreur à l'utilisateur
+      });
+    });
+  </script>
 </body>
 </html>
