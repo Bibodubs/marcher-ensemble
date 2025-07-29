@@ -1,109 +1,171 @@
-/* Réinitialisation des styles par défaut pour cohérence */
-* {
+/* Styles généraux pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
+    background-color: #0f0f0f; /* Fond très sombre pour un aspect moderne */
+    color: #f0f0f0; /* Texte clair par défaut */
     line-height: 1.6;
-    color: #333;
+    scroll-behavior: smooth; /* Défilement doux pour les ancres de navigation */
 }
 
-/* En-tête */
+/* Styles pour l'en-tête (Header) */
 header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem;
+    background-color: #1a1a1a; /* Fond sombre pour l'en-tête */
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre légère pour le relief */
 }
 
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+/* Styles de la navigation */
+nav {
+    margin-bottom: 30px;
+    padding: 0 20px;
 }
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
     font-weight: bold;
+    transition: color 0.3s ease; /* Transition douce au survol */
 }
-
 nav a:hover {
-    color: #3498db;
+    color: #ff5500; /* Couleur orange SoundCloud au survol */
 }
 
-/* Section principale */
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+/* Styles pour le titre "Mon Plaisir" */
+.slogan-container {
+    padding: 30px 20px;
+}
+.slogan-container h1 {
+    font-size: 4.5em; /* Très grande taille pour le titre */
+    color: #ff5500; /* La couleur orange vibrante de SoundCloud */
+    text-transform: uppercase;
+    letter-spacing: 7px; /* Écarte bien les lettres */
+    margin: 0;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée pour le relief */
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Police percutante */
 }
 
-#accueil {
+/* Styles pour le conteneur du lecteur SoundCloud */
+.soundcloud-player-container {
+    max-width: 900px; /* Limite la largeur du lecteur pour qu'il ne soit pas trop grand */
+    margin: 50px auto; /* Centre le conteneur et ajoute des marges verticales */
+    padding: 25px;
+    background-color: #2a2a2a; /* Un fond légèrement plus clair que le header */
+    border-radius: 12px; /* Bords arrondis */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6); /* Ombre plus profonde */
     text-align: center;
 }
 
-#accueil h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #2c3e50;
+.soundcloud-player-container h3 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: normal;
 }
 
-#accueil p {
-    margin-bottom: 1.5rem;
+/* Style pour le petit texte d'attribution SoundCloud en dessous du lecteur */
+.soundcloud-player-container div[style*="font-size: 10px"] {
+    margin-top: 20px; /* Espace entre l'iframe et le texte */
+    text-align: center;
+    color: #cccccc !important; /* Force la couleur si SoundCloud la modifie */
+    font-family: sans-serif !important; /* Assure une police lisible */
 }
-
-.cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #3498db;
-    color: white;
+.soundcloud-player-container div[style*="font-size: 10px"] a {
+    color: #cccccc !important;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+}
+.soundcloud-player-container div[style*="font-size: 10px"] a:hover {
+    text-decoration: underline;
 }
 
-.cta-button:hover {
-    background-color: #2980b9;
+/* Styles pour la section principale (Main content) */
+main {
+    max-width: 1200px; /* Largeur maximale pour le contenu principal */
+    margin: 40px auto;
+    padding: 20px;
 }
 
-/* Pied de page */
-footer {
-    background-color: #2c3e50;
-    color: white;
+/* Styles pour les sections individuelles */
+section {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background-color: #1a1a1a; /* Fond pour les sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    #accueil h2 {
-        font-size: 1.4rem;
-    }
-
-    .cta-button {
-        padding: 0.5rem 1rem;
-    }
+section:nth-child(even) { /* Pour alterner les couleurs de fond si tu veux */
+    background-color: #222222;
 }
+
+section h2 {
+    font-size: 2.8em;
+    color: #ff5500; /* Couleur d'accent */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+section p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    color: #cccccc;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+section ul li {
+    background-color: #333;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles pour les boutons */
+button {
+    background-color: #ff5500; /* Bouton orange SoundCloud */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e04400; /* Orange plus foncé au survol */
+    transform: translateY(-2px); /* Léger effet de soulèvement */
+}
+
+/* Styles du formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+    gap: 15px; /* Espace entre les éléments du formulaire */
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 15px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1em;
+}
+form input[type="text"]::placeholder,
