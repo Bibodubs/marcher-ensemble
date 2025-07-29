@@ -1,103 +1,40 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="frame-src https://w.soundcloud.com;">
-  <title>Marcher Ensemble</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-      background-color: #f0f0f0;
-    }
-    header {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    h1 {
-      font-size: 2.5em;
-      color: #333;
-    }
-    h2 {
-      font-size: 1.8em;
-      color: #555;
-    }
-    p {
-      font-size: 1.2em;
-      color: #666;
-      margin-bottom: 20px;
-    }
-    a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ff5500;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    a:hover {
-      background-color: #e04a00;
-    }
-    .soundcloud-container {
-      max-width: 600px;
-      width: 100%;
-      padding: 20px;
-      text-align: center;
-      margin: 20px auto;
-      display: block;
-    }
-    .soundcloud-container iframe {
-      border-radius: 12px;
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Marcher Ensemble</h1>
-    <h2>Bienvenue chez Marcher Ensemble</h2>
-    <p>Rejoignez notre communauté pour participer à des marches collectives, promouvoir la solidarité et découvrir de nouveaux horizons ensemble.</p>
-    <a href="/evenements">Voir nos événements</a>
-  </header>
-  <section>
-    <div class="soundcloud-container">
-      <h2>Écouter "Marcher Seul" par Bibo</h2>
-      <!-- Méthode 1: URL directe encodée -->
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bibodubs/marcher-seul&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-      </iframe>
-      
-      <!-- Alternative: Si la première ne marche pas, décommentez celle-ci -->
-      <!--
-      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bibodubs/marcher-seul&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-      </iframe>
-      -->
-    </div>
-  </section>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section about-bibo">
+            <h3>À Propos de Bibo</h3>
+            <p>Subtil et brutal, mélodique et ciselé, **Bibo incarne la polyvalence musicale**. Des free-parties aux festivals, il fusionne les genres pour créer une **sonorité unique et libre**, s'inspirant du hip-hop, de la techno et surtout de la bass music.</p>
+            <p>Autodidacte et passionné par l'électronique depuis l'adolescence, Bibo se forme continuellement pour rester à la pointe des tendances. Membre actif d'une association de sonorisation depuis plus de 4 ans, il a animé de nombreux événements et s'est produit dans sa région et au-delà.</p>
+            <p>Ces derniers mois, Antoine a marqué des festivals comme Planète Sauvage (plus de 1000 personnes), l'Ode Mère et Dès les premières Lueurs d'Octobre, aussi bien en DJ set qu'en tant qu'ingénieur son. Ses expériences variées lui ont permis de développer des compétences clés : DJ, live, organisation de soirées, régie son et technicien plateau.</p>
+            <p>Son ambition ? Faire vibrer son public et transmettre sa passion et son énergie à travers chaque note.</p>
+        </div>
 
-  <!-- Script de fallback si l'iframe ne marche pas -->
-  <script>
-    // Vérifier si l'iframe se charge correctement
-    window.addEventListener('load', function() {
-      const iframe = document.querySelector('iframe');
-      
-      // Timeout pour vérifier si l'iframe se charge
-      setTimeout(function() {
-        console.log('SoundCloud player should be loaded');
-      }, 3000);
-      
-      // Gestionnaire d'erreur
-      iframe.addEventListener('error', function() {
-        console.error('Erreur lors du chargement du player SoundCloud');
-        // Optionnel: afficher un message d'erreur à l'utilisateur
-      });
-    });
-  </script>
-</body>
-</html>
+        <div class="footer-section footer-links">
+            <h3>Liens Rapides</h3>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#musique">Musique</a></li>
+                <li><a href="#events">Événements</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Mentions Légales</a></li> 
+                <li><a href="#">Politique de Confidentialité</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section social-media">
+            <h3>Suivez Bibo</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Instagram"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                <a href="#" target="_blank" aria-label="SoundCloud"><img src="images/icon-soundcloud.png" alt="SoundCloud"></a>
+                </div>
+            <p class="contact-info">
+                Contact: <a href="mailto:contact@bibo-music.com">contact@bibo-music.com</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Bibo. Tous droits réservés.</p>
+        <p>Conçu et développé avec passion.</p>
+    </div>
+</footer>
