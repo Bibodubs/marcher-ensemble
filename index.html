@@ -1,56 +1,106 @@
-/* Styles pour l'en-tête */
-header {
-    background-color: #1a1a1a; /* Un fond sombre pour l'en-tête */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibo - Mon Plaisir</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
 
-/* Styles pour la navigation */
-nav {
-    margin-bottom: 20px;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1em;
-}
-nav a:hover {
-    color: #ff5500; /* Couleur SoundCloud au survol */
-}
+    <header>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#musique">Musique</a>
+            <a href="#events">Événements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+        <div class="slogan-container">
+            <h1>Mon Plaisir</h1> 
+        </div>
 
-/* Styles pour "Mon Plaisir" */
-.slogan-container {
-    padding: 30px 20px;
-}
-.slogan-container h1 {
-    font-size: 4em; /* Grande taille pour le titre */
-    color: #ff5500; /* La couleur orange de SoundCloud */
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Légère ombre pour le relief */
-}
+        <div class="soundcloud-player-container">
+            <h3>Écoutez "Marcher Seul" dès maintenant !</h3>
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1710601809&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/bibodubs" title="Bibo" target="_blank" style="color: #cccccc; text-decoration: none;">Bibo</a> · <a href="https://soundcloud.com/bibodubs/marcher-seul" title="Marcher Seul" target="_blank" style="color: #cccccc; text-decoration: none;">Marcher Seul</a></div>
+        </div>
+    </header>
 
-/* Styles pour le conteneur du lecteur SoundCloud */
-.soundcloud-player-container {
-    max-width: 900px; /* Limite la largeur du lecteur */
-    margin: 40px auto; /* Centre le conteneur et ajoute des marges */
-    padding: 20px;
-    background-color: #2a2a2a; /* Un fond légèrement plus clair que le header */
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-}
+    <main>
+        <section id="accueil" class="hero-section">
+            <h2>Bienvenue dans l'univers de Bibo</h2>
+            <p>Découvrez la fusion des sons et des énergies qui font vibrer les foules.</p>
+            <button onclick="location.href='#musique'">Découvrir la musique</button>
+        </section>
 
-.soundcloud-player-container h3 {
-    color: #fff;
-    margin-bottom: 25px;
-    font-size: 1.6em;
-}
+        <section id="musique" class="music-section">
+            <h2>Nos dernières créations</h2>
+            <p>Plongez dans nos titres récents et laissez-vous emporter par le rythme.</p>
+            </section>
 
-/* Styles spécifiques pour le div de petite taille sous l'iframe */
-.soundcloud-player-container div[style*="font-size: 10px"] {
-    margin-top: 15px; /* Espace entre l'iframe et le texte */
-    text-align: center; /* Centre le texte d'attribution */
-}
+        <section id="events" class="events-section">
+            <h2>Prochains Événements</h2>
+            <p>Retrouvez-nous sur scène pour des expériences inoubliables.</p>
+            <ul>
+                <li>[Date] - [Lieu] - [Nom de l'événement]</li>
+                <li>[Date] - [Lieu] - [Nom de l'événement]</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contactez Bibo</h2>
+            <p>Pour toute demande ou collaboration, n'hésitez pas à nous écrire.</p>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Votre Nom">
+                <input type="email" placeholder="Votre Email">
+                <textarea placeholder="Votre Message"></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section about-bibo">
+                <h3>À Propos de Bibo</h3>
+                <p>Subtil et brutal, mélodique et ciselé, **Bibo incarne la polyvalence musicale**. Des free-parties aux festivals, il fusionne les genres pour créer une **sonorité unique et libre**, s'inspirant du hip-hop, de la techno et surtout de la bass music.</p>
+                <p>Autodidacte et passionné par l'électronique depuis l'adolescence, Bibo se forme continuellement pour rester à la pointe des tendances. Membre actif d'une association de sonorisation depuis plus de 4 ans, il a animé de nombreux événements et s'est produit dans sa région et au-delà.</p>
+                <p>Ces derniers mois, Antoine a marqué des festivals comme Planète Sauvage (plus de 1000 personnes), l'Ode Mère et Dès les premières Lueurs d'Octobre, aussi bien en DJ set qu'en tant qu'ingénieur son. Ses expériences variées lui ont permis de développer des compétences clés : DJ, live, organisation de soirées, régie son et technicien plateau.</p>
+                <p>Son ambition ? Faire vibrer son public et transmettre sa passion et son énergie à travers chaque note.</p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#musique">Musique</a></li>
+                    <li><a href="#events">Événements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Mentions Légales</a></li> 
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social-media">
+                <h3>Suivez Bibo</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                    <a href="#" target="_blank" aria-label="SoundCloud"><img src="images/icon-soundcloud.png" alt="SoundCloud"></a>
+                    </div>
+                <p class="contact-info">
+                    Contact: <a href="mailto:contact@bibo-music.com">contact@bibo-music.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bibo. Tous droits réservés.</p>
+            <p>Conçu et développé avec passion.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
