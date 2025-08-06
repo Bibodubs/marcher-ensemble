@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcher Ensemble</title>
+  <!-- Utilisation de la police Inter de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Utilisation de Tailwind CSS via le CDN pour un style rapide et moderne -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* CSS personnalisé pour l'arrière-plan */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-image: url('/assets/L-1620f75c.jpg'); /* Chemin de votre image de fond */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Styles pour l'effet machine à écrire et l'ombre du texte */
+    .typewriter-container {
+      /* Le texte sera caché par défaut */
+      overflow: hidden;
+      /* Ajoute un contour noir plus fin et une ombre légère au texte pour la lisibilité */
+      text-shadow: 
+        -0.2px -0.2px 0 #000,  
+         0.2px -0.2px 0 #000,
+        -0.2px  0.2px 0 #000,
+         0.2px  0.2px 0 #000,
+         1px  1px 2px rgba(0, 0, 0, 0.5); /* Ombre plus douce */
+    }
+
+    /* Animation pour simuler le clignotement du curseur */
+    .typewriter-cursor {
+      border-right: 2px solid rgba(255, 255, 255, .75); /* Curseur blanc pour le fond sombre */
+      animation: blink-caret .75s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: rgba(255, 255, 255, .75); }
+    }
+  </style>
+</head>
+<body class="text-white flex flex-col items-center p-4 min-h-screen">
+
+  <!-- Titre avec un style binaire, en noir sur fond blanc semi-transparent -->
+  <h1 class="mt-12 text-2xl md:text-3xl font-mono text-black bg-white bg-opacity-50 px-4 py-2 rounded-lg">
+    01000010 01101111 01101110 01101010 01101111 01110101 01110010
+  </h1>
+
+  <!-- Lecteur SoundCloud - Utilise maintenant la largeur maximale de la page -->
+  <div class="player my-8 mx-auto w-full max-w-4xl bg-black bg-opacity-60 rounded-xl p-4 shadow-lg">
+    <h2 class="text-xl md:text-2xl font-bold mb-4">Écouter</h2>
+    <iframe title="Marcher Seul" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1710601809&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    </iframe>
+    <div class="text-xs text-gray-400 text-center mt-1">
+      <a href="https://soundcloud.com/bibodubs" title="Bibo" target="_blank" class="hover:text-gray-200 transition-colors">Bibo</a> · 
+      <a href="https://soundcloud.com/bibodubs/marcher-seul" title="Marcher Seul" target="_blank" class="hover:text-gray-200 transition-colors">Marcher Seul</a>
+    </div>
+  </div>
+
+  <!-- Conteneur pour les biographies, sans fond, avec texte blanc, contour et ombre -->
+  <div id="bio-container" class="mx-auto max-w-4xl p-8 leading-relaxed text-white typewriter-container">
+    
+    <!-- Biographie française -->
+    <div class="mb-8">
+      <p class="text-left text-sm">Subtil et brutal, mélodique et ciselé, des free-party au festivals, Bibo est un archétype de la polyvalence et la complémentarité. Chez lui, le yin et le yang s'entremêlent et fusionnent pour donner naissance à son œuvre, une sonorité unique, une fresque musicale hors des cadres, riche et libre.</p>
+      <p class="mt-4 text-left text-sm">À l'aise avec l'informatique depuis son adolescence, il a débuté la musique électronique dans sa chambre. Autodidacte, il se forme régulièrement pour suivre les évolutions technologiques de la musique électronique et faire évoluer sa musique et sa pratique aux tendances actuelles.</p>
+      <p class="mt-4 text-left text-sm">Membre actif d'une association de sonorisation de soirée depuis plus de 4 ans , il a animé plusieurs événements musicaux tels que des festivals, des soirées privées et des free party où il s’est produit dans sa région et au-delà.</p>
+      <p class="mt-4 text-left text-sm">Ces derniers mois Antoine, a eu l’occasion de se produire (pour des DJ set et en tant qu'ingénieur son) à plusieurs festivals dont Planète Sauvage (Plus de 1000 personnes), l’Ode mère, Dès les premières Lueurs d’octobre ainsi qu’en free-party. De par ses diverses expériences Bibo a acquis et développé des compétences dans différents domaines de l’univers musical et sonore : DJ, live, organisation de soirées, régie son, technicien plateau.</p>
+      <p class="mt-4 text-left text-sm">Les couleurs musicales de ses compositions sont variées allant du hip-hop à la techno à en passant par la bass music qu'il apprécie tout particulièrement. Comme tout artiste, il évolue constamment dans son art et puise son inspiration dans le travail de nombreux artistes comme Infekt, Enei, Boys Noize, Plk, Josman.</p>
+      <p class="mt-4 text-left text-sm">Bibo a pour ambition de faire vibrer son public et de transmettre sa passion et son énergie au travers de sa musique !</p>
+    </div>
+    
+    <!-- Traduction anglaise -->
+    <div class="text-xs">
+      <p class="text-left">Subtle and brutal, melodic and chiseled, from free parties to festivals, Bibo is an archetype of versatility and complementarity. With him, yin and yang intertwine and fuse to give birth to his work, a unique sound, a musical fresco beyond the frames, rich and free.</p>
+      <p class="mt-4 text-left">Comfortable with computers since his adolescence, he started electronic music in his room. Self-taught, he regularly trains to follow the technological evolutions of electronic music and to evolve his music and his practice with current trends.</p>
+      <p class="mt-4 text-left">An active member of a party sound system association for more than 4 years, he has hosted several musical events such as festivals, private parties and free parties where he performed in his region and beyond.</p>
+      <p class="mt-4 text-left">These last months Antoine, had the opportunity to perform (for DJ sets and as a sound engineer) at several festivals including Planète Sauvage (more than 1000 people), l'Ode mère, Dès les premières Lueurs d'octobre as well as in free parties. Through his various experiences Bibo has acquired and developed skills in different areas of the musical and sound universe: DJ, live, party organization, sound management, stage technician.</p>
+      <p class="mt-4 text-left">The musical colors of his compositions are varied ranging from hip-hop to techno to bass music, which he particularly appreciates. Like any artist, he is constantly evolving in his art and draws his inspiration from the work of many artists such as Infekt, Enei, Boys Noize, Plk, Josman.</p>
+      <p class="mt-4 text-left">Bibo's ambition is to make his audience vibrate and to transmit his passion and energy through his music!</p>
+    </div>
+  </div>
+
+
+  <!-- Script pour l'animation de machine à écrire -->
+  <script>
+    const bioContainer = document.getElementById('bio-container');
+    const paragraphs = bioContainer.querySelectorAll('p');
+    let delay = 0;
+
+    const typeWriter = (element, text, speed) => {
+      let i = 0;
+      element.innerHTML = '';
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    };
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Quand l'élément est visible, on démarre l'effet pour chaque paragraphe
+            paragraphs.forEach((p, index) => {
+                const originalText = p.textContent;
+                p.textContent = ''; // On vide le paragraphe
+                const speed = 10; // Vitesse de frappe
+                setTimeout(() => {
+                    typeWriter(p, originalText, speed);
+                }, delay);
+                delay += originalText.length * speed + 500; // Ajoute un délai entre chaque paragraphe
+            });
+            // On désactive l'observateur une fois l'animation lancée
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 } // Déclenche l'animation quand 20% de l'élément est visible
+    );
+
+    // Vérifie que l'élément existe avant de l'observer
+    if (bioContainer) {
+        observer.observe(bioContainer);
+    }
+  </script>
+</body>
+</html>
